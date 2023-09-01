@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIA TRANSLATE</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>       
+    <form action="#">
+        <div class="titulo">
+            <h1>AIA TRANSLATE</h1>
+        </div>
+        <div class="contenedor">
+            <div class="ingresos">
+                <div class="header">
+                    <label for="lang1">Lenguaje Original</label>
+                    <select name="" id="lang1">
+                    <option value="es">spanish</option>
+                    <!-- <option value="spanish">Spanish</option>
+                    <option value="france">France</option>
+                    <option value="italian">Italian</option>
+                    <option value="germany">Germany</option>
+                    <option value="chinese">Chinese</option> -->
+                    </select>
+
+                </div>         
+                        <div class="textarea">
+                            <textarea id="ingreso1" name="ingreso" cols="30" rows="10" placeholder="Ingrese aquí su texto a traducir"></textarea>
+                        </div>
+            </div>
+
+            <div class="respuesta"> 
+                <div class="header">
+                    <label for="lang2">Lenguaje Final</label>
+                    <select name="To" id="lang2">
+                    <option value="en">english</option>
+                    <!-- <option value="spanish">Spanish</option>
+                    <option value="france">France</option>
+                    <option value="italian">Italian</option>
+                    <option value="germany">Germany</option>
+                    <option value="chinese">Chinese</option>-->
+                    </select>
+                </div>
+                    <div class="textarea">                        
+                            <!-- ACÁ SE TIENE QUE CREAR MEDIANTE EL INNERHTML EN JAVASCRIPT LA TEXTAREA CON  -->
+                            <textarea id="ingreso2" name="ingreso" cols="30" rows="10" placeholder="Aquí se mostrará su texto traducido" readonly="readonly"></textarea>                        
+                    </div>
+            </div>
+        </div>     
+        <div class="boton">
+            <input type="button" value="TRADUCIR" id="traducir">
+            <script>
+                    addEventListener("keyup", function(e) {
+                        if (e.keyCode === 13) {
+                            document.getElementById("traducir").click();
+                        }
+                    });                
+            </script>
+        </div>                  
+        <script src="Script.js"></script>
+    </form>
+
+</body>
+</html>
